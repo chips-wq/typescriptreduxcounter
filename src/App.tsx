@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "antd";
+import { Button, Typography } from "antd";
 import Title from "antd/lib/typography/Title";
 import { useEffect } from "react";
 import { ActionTypes } from "./state/reducers/counterReducer";
@@ -27,9 +27,12 @@ function App() {
             }}
         >
             <Title style={{ margin: 0 }}>Counter</Title>
-            <Title style={{ margin: 0 }} level={2} copyable={true}>
+            <Title style={{ margin: 0 }} level={1}>
                 {counter}
             </Title>
+            <Typography.Paragraph style={{ margin: 0 }}>
+                This was added on the master branch
+            </Typography.Paragraph>
             <div style={{ display: "flex", gap: "1rem" }}>
                 <Button onClick={decreaseCounter} size="large">
                     Decrease
