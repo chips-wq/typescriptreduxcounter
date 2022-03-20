@@ -1,17 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "antd";
 import Title from "antd/lib/typography/Title";
-import { useEffect } from "react";
-import { ActionTypes } from "./state/reducers/counterReducer";
 import { State } from "./state/reducers";
+import {
+    decreaseCounter,
+    increaseCounter,
+} from "./state/action-creators/couterActions";
 function App() {
     const dispatch = useDispatch();
     const counter = useSelector((state: State) => state.counter);
-    const increaseCounter = () => {
-        dispatch({ type: ActionTypes.INCREASE });
+    const increase = () => {
+        dispatch(increaseCounter());
     };
-    const decreaseCounter = () => {
-        dispatch({ type: ActionTypes.DECREASE });
+    const decrease = () => {
+        dispatch(decreaseCounter());
     };
     return (
         <div
@@ -31,10 +33,10 @@ function App() {
                 {counter}
             </Title>
             <div style={{ display: "flex", gap: "1rem" }}>
-                <Button onClick={decreaseCounter} size="large">
+                <Button onClick={decrease} size="large">
                     Decrease
                 </Button>
-                <Button onClick={increaseCounter} size="large" type="primary">
+                <Button onClick={increase} size="large" type="primary">
                     Increase
                 </Button>
             </div>
