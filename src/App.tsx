@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Typography } from "antd";
-import Title from "antd/lib/typography/Title";
 import { State } from "./state/reducers";
 import {
     decreaseCounter,
@@ -28,10 +27,10 @@ function App() {
                 justifyContent: "center",
             }}
         >
-            <Title style={{ margin: 0 }}>Counter</Title>
-            <Title style={{ margin: 0 }} level={1}>
+            <Typography.Title style={{ margin: 0 }}>Counter</Typography.Title>
+            <Typography.Title style={{ margin: 0 }} level={1}>
                 {counter}
-            </Title>
+            </Typography.Title>
             <Typography.Paragraph style={{ margin: 0 }}>
                 This was added on the master branch
             </Typography.Paragraph>
