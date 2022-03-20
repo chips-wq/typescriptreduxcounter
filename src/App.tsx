@@ -31,9 +31,6 @@ function App() {
             <Typography.Title style={{ margin: 0 }} level={1}>
                 {counter}
             </Typography.Title>
-            <Typography.Paragraph style={{ margin: 0 }}>
-                This was added on the master branch
-            </Typography.Paragraph>
             <div style={{ display: "flex", gap: "1rem" }}>
                 <Button onClick={decrease} size="large">
                     Decrease
